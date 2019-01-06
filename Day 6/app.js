@@ -9,7 +9,8 @@ const app = express();
 
 app.use(bodyParser.urlencoded());
 
-app.use(adminRoutes);
+//All admin routes will now be precedd by /admin/
+app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
