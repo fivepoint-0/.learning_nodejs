@@ -30,7 +30,7 @@ app.use('/add-product', (req, res, next) => {
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
-  res.render('404', {pageTitle: "Hbs not found :("});
+  res.render('404', {pageTitle: "Page not found :("});
 });
 
 app.listen(3000);
