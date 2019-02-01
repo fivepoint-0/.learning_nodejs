@@ -23,6 +23,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // All admin routes will now be preceded by /admin/
 app.use('/admin', adminData.routes);
+
+app.use('/add-product', (req, res, next) => {
+  res.redirect('/admin/add-product');
+});
+
 app.use(shopRoutes);
 
 

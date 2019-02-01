@@ -17,7 +17,7 @@ html(lang="en")
                         a(href="/admin/add-product") Add Product
         main
         if prods.length > 0
-            .grid
+            .grid(style="padding-left: 5rem;")
                 each product in prods
                     article.card.product-item
                         header.card__header
@@ -30,4 +30,5 @@ html(lang="en")
                         .card__actions
                             button.btn Add to Cart
         else
-            h1 No Products
+            .grid(style="padding-left: 5rem;")
+                h1 No Products
