@@ -16,7 +16,11 @@ const app = express();
 
 const expressHbs = require('express-handlebars');
 
-app.engine('hbs', expressHbs());
+app.engine('hbs', expressHbs({
+  layoutsDir: 'views/layouts',
+  defaultLayout: 'main-layout',
+  extname: 'hbs'
+}));
 // app.set('view engine', 'pug');
 app.set('view engine', 'hbs'); // arg2 Has to match app.engine(arg1)
 app.set('views', 'views');
