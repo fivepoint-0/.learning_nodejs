@@ -6,8 +6,9 @@ app.use('/users', (req, res, next) => {
     res.send("You are viewing the users page.");
 });
 
+//both get and post
 app.use('/', (req, res, next) => {
-    console.log('In another middleware!');
+    console.log('In the root path');
     let date = Date();
     setTimeout(function() {
         res.send("<h1>Hello :)</h1>" + date);
