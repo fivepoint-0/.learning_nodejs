@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 
 
     //Instead of sending shop.html, use the templating engine PUG.
-    res.render('shop', {prods: products, docTitle: 'Shopping'});
+    res.render('shop', {prods: products, pageTitle: 'Shopping', path: '/'});
 });
 
 module.exports = router;
